@@ -138,7 +138,7 @@ class _DoctorPageState extends State<DoctorPage> {
                                   Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                      builder: (context) => DoctorDetailsPage(),
+                                      builder: (context) => DoctorDetailsPage(id: '14',),
                                     ),
                                   );
                                 },

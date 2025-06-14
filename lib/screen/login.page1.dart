@@ -13,8 +13,19 @@ class LoginPage1 extends StatefulWidget {
 }
 
 class _LoginPage1State extends State<LoginPage1> {
+  final TextEditingController _controller = TextEditingController();
+  void _checkAndNavigate(String value) {
+    if (value.length == 10 && RegExp(r'^[0-9]+$').hasMatch(value)) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => MobileLoginPage(mobileNo: '${_controller.text}',)),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Scaffold(
       backgroundColor: Color(0xFFFFFFFF),
       body: Column(
@@ -58,16 +69,14 @@ class _LoginPage1State extends State<LoginPage1> {
                 ),
                 SizedBox(height: 14.h),
                 TextField(
-                  readOnly: true,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => MobileLoginPage(),
-                      ),
-                    );
-                  },
+                  controller: _controller,
+                  keyboardType: TextInputType.number,
+                  maxLength: 10,
+                  autofocus: true,
+                  onChanged: _checkAndNavigate,
                   decoration: InputDecoration(
+                    hintText: "Mobile number",
+                    counterText: "", // hides counter
                     contentPadding: EdgeInsets.only(left: 10.w, right: 10.w),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(7.r),
@@ -83,15 +92,14 @@ class _LoginPage1State extends State<LoginPage1> {
                         width: 0.5.w,
                       ),
                     ),
-                    //prefixIcon: Container(child: Text("+91")),
-                    hintText: "Mobile number",
-                    hintStyle: GoogleFonts.inter(
+                    hintStyle: TextStyle(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.w400,
                       color: Color.fromARGB(153, 0, 0, 0),
                     ),
                   ),
                 ),
+
                 SizedBox(height: 20.h),
                 Text(
                   "Trouble signing in?",

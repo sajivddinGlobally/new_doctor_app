@@ -91,10 +91,10 @@ class _LoginPage3State extends State<LoginPage3> {
             Center(
               child: GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    CupertinoPageRoute(builder: (context) => MobileLoginPage()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   CupertinoPageRoute(builder: (context) => MobileLoginPage()),
+                  // );
                 },
                 child: Container(
                   width: 230.w,
