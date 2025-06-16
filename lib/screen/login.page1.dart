@@ -18,7 +18,10 @@ class _LoginPage1State extends State<LoginPage1> {
     if (value.length == 10 && RegExp(r'^[0-9]+$').hasMatch(value)) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => MobileLoginPage(mobileNo: '${_controller.text}',)),
+        MaterialPageRoute(
+          builder: (context) =>
+              MobileLoginPage(mobileNo: '${_controller.text}'),
+        ),
       );
     }
   }
@@ -34,7 +37,7 @@ class _LoginPage1State extends State<LoginPage1> {
           Container(
             width: MediaQuery.of(context).size.width,
             height: 437.h,
-            decoration: BoxDecoration(color: Color(0xFF28318C)),
+            decoration: BoxDecoration(color: Color(0xff163453)),
             child: Padding(
               padding: EdgeInsets.only(left: 16.w, bottom: 50.h),
               child: Column(
@@ -72,7 +75,7 @@ class _LoginPage1State extends State<LoginPage1> {
                   controller: _controller,
                   keyboardType: TextInputType.number,
                   maxLength: 10,
-                    autofocus: false, // ✅ FIXED LINE
+                  autofocus: false, // ✅ FIXED LINE
                   onChanged: _checkAndNavigate,
                   decoration: InputDecoration(
                     hintText: "Mobile number",

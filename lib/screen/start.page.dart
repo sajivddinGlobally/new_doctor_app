@@ -15,7 +15,7 @@ class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF28318C),
+      backgroundColor: Color(0xff163453),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -72,7 +72,7 @@ class _StartPageState extends State<StartPage> {
                       height: 56.h,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(14.r),
-                        color: Color(0xFF28318C),
+                        color: Color(0xff163453),
                       ),
                       child: Center(
                         child: Text(

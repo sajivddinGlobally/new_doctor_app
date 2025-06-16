@@ -38,7 +38,6 @@ class _DoctorPageState extends State<DoctorPage> {
           Padding(
             padding: EdgeInsets.only(left: 20.w, right: 20.w),
             child: SizedBox(
-              
               height: 44.h,
               child: TextField(
                 decoration: InputDecoration(
@@ -79,7 +78,7 @@ class _DoctorPageState extends State<DoctorPage> {
               child: Column(
                 children: [
                   TabBar(
-                    indicatorColor: Color(0xFF28318C),
+                    indicatorColor: Color(0xff163453),
                     labelColor: Color(0xFF000000),
                     unselectedLabelColor: Color(0xFF9A97AE),
                     indicatorWeight: 2.w,
@@ -139,7 +138,8 @@ class _DoctorPageState extends State<DoctorPage> {
                                   Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                      builder: (context) => DoctorDetailsPage(id: '14',),
+                                      builder: (context) =>
+                                          DoctorDetailsPage(id: '14'),
                                     ),
                                   );
                                 },
@@ -184,7 +184,7 @@ class _DoctorPageState extends State<DoctorPage> {
                                                   style: GoogleFonts.inter(
                                                     fontSize: 14.sp,
                                                     fontWeight: FontWeight.w700,
-                                                    color: Color(0xFF28318C),
+                                                    color: Color(0xff163453),
                                                     letterSpacing: -1,
                                                   ),
                                                 ),
@@ -248,7 +248,7 @@ class _DoctorPageState extends State<DoctorPage> {
                                                 width: 140.w,
                                                 height: 34.h,
                                                 decoration: BoxDecoration(
-                                                  color: Color(0xFF28318C),
+                                                  color: Color(0xff163453),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                         5.26.r,
@@ -288,7 +288,7 @@ class _DoctorPageState extends State<DoctorPage> {
                                                         5.26.r,
                                                       ),
                                                   border: Border.all(
-                                                    color: Color(0xFF28318C),
+                                                    color: Color(0xff163453),
                                                   ),
                                                 ),
                                                 child: Center(
@@ -298,7 +298,7 @@ class _DoctorPageState extends State<DoctorPage> {
                                                       fontSize: 14.sp,
                                                       fontWeight:
                                                           FontWeight.w600,
-                                                      color: Color(0xFF28318C),
+                                                      color: Color(0xff163453),
                                                     ),
                                                   ),
                                                 ),

@@ -39,7 +39,7 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     final box = Hive.box("userdata");
     final name = box.get("@name");
-    
+
     final category = ref.watch(combinedDoctorDataProvider);
     return Scaffold(
       body: tabBottom == 0
@@ -56,7 +56,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                           bottomLeft: Radius.circular(30.r),
                           bottomRight: Radius.circular(30.r),
                         ),
-                        color: Color(0xFF28318C),
+                        color: Color(0xff163453),
                       ),
                       child: Column(
                         children: [
@@ -357,12 +357,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                                   style: GoogleFonts.inter(
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w300,
-                                    color: Color(0xFF28318C),
+                                    color: Color(0xff163453),
                                   ),
                                 ),
                                 Icon(
                                   Icons.arrow_forward_ios_rounded,
-                                  color: Color(0xFF28318C),
+                                  color: Color(0xff163453),
                                   size: 16.sp,
                                 ),
                                 SizedBox(width: 20.w),
@@ -766,12 +766,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                                           style: GoogleFonts.inter(
                                             fontSize: 13.sp,
                                             fontWeight: FontWeight.w300,
-                                            color: Color(0xFF28318C),
+                                            color: Color(0xff163453),
                                           ),
                                         ),
                                         Icon(
                                           Icons.arrow_forward_ios_rounded,
-                                          color: Color(0xFF28318C),
+                                          color: Color(0xff163453),
                                           size: 16.sp,
                                         ),
                                         SizedBox(width: 20.w),
@@ -828,12 +828,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                                   style: GoogleFonts.inter(
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w300,
-                                    color: Color(0xFF28318C),
+                                    color: Color(0xff163453),
                                   ),
                                 ),
                                 Icon(
                                   Icons.arrow_forward_ios_rounded,
-                                  color: Color(0xFF28318C),
+                                  color: Color(0xff163453),
                                   size: 16.sp,
                                 ),
                                 SizedBox(width: 20.w),
@@ -844,11 +844,11 @@ class _HomePageState extends ConsumerState<HomePage> {
                               height: 220.h,
                               child: ListView.builder(
                                 padding: EdgeInsets.zero,
-                                itemCount: snap.testimonials.data.testimonials.length,
+                                itemCount:
+                                    snap.testimonials.data.testimonials.length,
                                 scrollDirection: Axis.horizontal,
                                 itemBuilder: (context, index) {
                                   return Column(
-                                    
                                     children: [
                                       Padding(
                                         padding: EdgeInsets.only(
@@ -868,7 +868,11 @@ class _HomePageState extends ConsumerState<HomePage> {
                                             ),
                                           ),
                                           child: Image.network(
-                                            snap.testimonials.data.testimonials[index].imageUrl
+                                            snap
+                                                .testimonials
+                                                .data
+                                                .testimonials[index]
+                                                .imageUrl
                                                 .toString(),
                                             width: 161.w,
                                             height: 185.h,
@@ -876,10 +880,18 @@ class _HomePageState extends ConsumerState<HomePage> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
-                                        height: 5.h,
+                                      SizedBox(height: 5.h),
+                                      Text(
+                                        snap
+                                            .testimonials
+                                            .data
+                                            .testimonials[index]
+                                            .title,
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 15.w,
+                                        ),
                                       ),
-                                      Text(snap.testimonials.data.testimonials[index].title, style: TextStyle(color: Colors.black, fontSize: 15.w),)
                                     ],
                                   );
                                 },
@@ -903,12 +915,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                                   style: GoogleFonts.inter(
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w300,
-                                    color: Color(0xFF28318C),
+                                    color: Color(0xff163453),
                                   ),
                                 ),
                                 Icon(
                                   Icons.arrow_forward_ios_rounded,
-                                  color: Color(0xFF28318C),
+                                  color: Color(0xff163453),
                                   size: 16.sp,
                                 ),
                                 SizedBox(width: 20.w),
@@ -960,7 +972,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                                             style: GoogleFonts.lexend(
                                               fontSize: 12.sp,
                                               fontWeight: FontWeight.w400,
-                                              color: Color(0xFF28318C),
+                                              color: Color(0xff163453),
                                             ),
                                           ),
                                         ],
@@ -988,12 +1000,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                                   style: GoogleFonts.inter(
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w300,
-                                    color: Color(0xFF28318C),
+                                    color: Color(0xff163453),
                                   ),
                                 ),
                                 Icon(
                                   Icons.arrow_forward_ios_rounded,
-                                  color: Color(0xFF28318C),
+                                  color: Color(0xff163453),
                                   size: 16.sp,
                                 ),
                                 SizedBox(width: 20.w),
@@ -1001,49 +1013,49 @@ class _HomePageState extends ConsumerState<HomePage> {
                             ),
                             SizedBox(height: 12.h),
                             SizedBox(
-                                  height: 100.h,
-                                  child: ListView.builder(
-                                    shrinkWrap: true,
-                                    physics: NeverScrollableScrollPhysics(),
-                                    scrollDirection: Axis.horizontal,
-                                    itemCount: 4,
-                                    itemBuilder: (context, index) {
-                                      return Specilist(
-                                        image: snap
-                                            .doctorCategoryResponse
-                                            .data[index]
-                                            .imageUrl,
-                                        name: snap
-                                            .doctorCategoryResponse
-                                            .data[index]
-                                            .name,
-                                        bgColor: Color(0xFFE2F7F8),
-                                      );
-                                    },
-                                  ),
-                                ),
+                              height: 100.h,
+                              child: ListView.builder(
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                scrollDirection: Axis.horizontal,
+                                itemCount: 4,
+                                itemBuilder: (context, index) {
+                                  return Specilist(
+                                    image: snap
+                                        .doctorCategoryResponse
+                                        .data[index]
+                                        .imageUrl,
+                                    name: snap
+                                        .doctorCategoryResponse
+                                        .data[index]
+                                        .name,
+                                    bgColor: Color(0xFFE2F7F8),
+                                  );
+                                },
+                              ),
+                            ),
                             SizedBox(height: 12.h),
                             SizedBox(
                               height: 100.h,
                               child: ListView.builder(
-                                    shrinkWrap: true,
-                                    physics: NeverScrollableScrollPhysics(),
-                                    scrollDirection: Axis.horizontal,
-                                    itemCount: 4,
-                                    itemBuilder: (context, index) {
-                                      return Specilist(
-                                        image: snap
-                                            .doctorCategoryResponse
-                                            .data[index+4]
-                                            .imageUrl,
-                                        name: snap
-                                            .doctorCategoryResponse
-                                            .data[index+4]
-                                            .name,
-                                        bgColor: Color(0xFFE2F7F8),
-                                      );
-                                    },
-                                  ),
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                scrollDirection: Axis.horizontal,
+                                itemCount: 4,
+                                itemBuilder: (context, index) {
+                                  return Specilist(
+                                    image: snap
+                                        .doctorCategoryResponse
+                                        .data[index + 4]
+                                        .imageUrl,
+                                    name: snap
+                                        .doctorCategoryResponse
+                                        .data[index + 4]
+                                        .name,
+                                    bgColor: Color(0xFFE2F7F8),
+                                  );
+                                },
+                              ),
                             ),
                             SizedBox(height: 30.h),
                           ],
@@ -1073,11 +1085,11 @@ class _HomePageState extends ConsumerState<HomePage> {
             tabBottom = value;
           });
         },
-        selectedItemColor: Color(0xFF28318C),
+        selectedItemColor: Color(0xff163453),
         selectedLabelStyle: GoogleFonts.inter(
           fontSize: 10.sp,
           fontWeight: FontWeight.w400,
-          color: Color(0xFF28318C),
+          color: Color(0xff163453),
         ),
         unselectedItemColor: Color(0xFF979C9E),
         unselectedLabelStyle: GoogleFonts.inter(

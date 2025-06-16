@@ -1,5 +1,3 @@
-
-
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
@@ -24,7 +22,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
 
   @override
   Widget build(BuildContext context) {
-        final box = Hive.box("userdata");
+    final box = Hive.box("userdata");
     final name = box.get("@name");
     final data = ref.watch(doctorProvider);
 
@@ -33,8 +31,8 @@ class _SearchPageState extends ConsumerState<SearchPage> {
       body: data.when(
         data: (snap) {
           final filteredList = snap.data.where((doctor) {
-            final fullName =
-                '${doctor.firstName} ${doctor.lastName}'.toLowerCase();
+            final fullName = '${doctor.firstName} ${doctor.lastName}'
+                .toLowerCase();
             final category = doctor.category?.toLowerCase() ?? '';
             final address = doctor.address.toLowerCase();
             return fullName.contains(searchQuery) ||
@@ -82,8 +80,10 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                       ],
                     ),
                     const Spacer(),
-                    const Icon(Icons.notifications_none,
-                        color: Color(0xFFD9D9D9)),
+                    const Icon(
+                      Icons.notifications_none,
+                      color: Color(0xFFD9D9D9),
+                    ),
                     SizedBox(width: 25.w),
                   ],
                 ),
@@ -104,7 +104,9 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                             },
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.symmetric(
-                                  vertical: 10.w, horizontal: 20.w),
+                                vertical: 10.w,
+                                horizontal: 20.w,
+                              ),
                               prefixIcon: const Icon(
                                 Icons.search,
                                 color: Color(0xffD9D9D9),
@@ -140,11 +142,15 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.r),
                           border: Border.all(
-                              color: const Color(0xFFD9D9D9), width: 1.w),
+                            color: const Color(0xFFD9D9D9),
+                            width: 1.w,
+                          ),
                         ),
                         child: const Center(
-                          child:
-                              Icon(Icons.crop_free, color: Color(0xffD9D9D9)),
+                          child: Icon(
+                            Icons.crop_free,
+                            color: Color(0xffD9D9D9),
+                          ),
                         ),
                       ),
                     ],
@@ -163,8 +169,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                   ),
                 ),
                 Padding(
-                  padding:
-                      EdgeInsets.only(left: 0.w, top: 20.h, right: 0.w),
+                  padding: EdgeInsets.only(left: 0.w, top: 20.h, right: 0.w),
                   child: ListView.builder(
                     itemCount: filteredList.length,
                     shrinkWrap: true,
@@ -172,21 +177,23 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final doctor = filteredList[index];
-                      
+
                       return GestureDetector(
-                        
                         onTap: () {
                           log(doctor.id);
                           Navigator.push(
                             context,
                             CupertinoPageRoute(
-                              builder: (context) =>  DoctorDetailsPage(id: doctor.id.toString(),),
+                              builder: (context) =>
+                                  DoctorDetailsPage(id: doctor.id.toString()),
                             ),
                           );
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(
-                              horizontal: 20.w, vertical: 20.h),
+                            horizontal: 20.w,
+                            vertical: 20.h,
+                          ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -207,7 +214,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                                     style: GoogleFonts.inter(
                                       fontSize: 14.sp,
                                       fontWeight: FontWeight.w700,
-                                      color: const Color(0xFF28318C),
+                                      color: const Color(0xff163453),
                                       letterSpacing: -1,
                                     ),
                                   ),
@@ -252,9 +259,10 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                                         width: 140.w,
                                         height: 34.h,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFF28318C),
-                                          borderRadius:
-                                              BorderRadius.circular(5.26.r),
+                                          color: const Color(0xff163453),
+                                          borderRadius: BorderRadius.circular(
+                                            5.26.r,
+                                          ),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -282,10 +290,11 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                                         width: 56.w,
                                         height: 34.h,
                                         decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5.26.r),
+                                          borderRadius: BorderRadius.circular(
+                                            5.26.r,
+                                          ),
                                           border: Border.all(
-                                            color: const Color(0xFF28318C),
+                                            color: const Color(0xff163453),
                                           ),
                                         ),
                                         child: Center(
@@ -294,7 +303,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                                             style: GoogleFonts.urbanist(
                                               fontSize: 14.sp,
                                               fontWeight: FontWeight.w600,
-                                              color: const Color(0xFF28318C),
+                                              color: const Color(0xff163453),
                                             ),
                                           ),
                                         ),
