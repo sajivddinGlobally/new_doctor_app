@@ -1,3 +1,7 @@
+
+
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,7 +22,9 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
   int tabBo = 0;
   @override
   Widget build(BuildContext context) {
+ 
     final data = ref.watch(perticulerDocotrProvider(widget.id));
+    log(int.parse(widget.id));
     return Scaffold(
       backgroundColor: Color(0xFFFFFFFF),
       appBar: AppBar(

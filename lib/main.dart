@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
             // tested with just a hot reload.
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           ),
-          home: token == false? StartPage() : HomePage(),
+          home: token == null? StartPage() : HomePage(),
         );
       },
     );

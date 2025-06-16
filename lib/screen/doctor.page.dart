@@ -38,6 +38,7 @@ class _DoctorPageState extends State<DoctorPage> {
           Padding(
             padding: EdgeInsets.only(left: 20.w, right: 20.w),
             child: SizedBox(
+              
               height: 44.h,
               child: TextField(
                 decoration: InputDecoration(

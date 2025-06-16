@@ -1,3 +1,7 @@
+
+
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -168,8 +172,11 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final doctor = filteredList[index];
+                      
                       return GestureDetector(
+                        
                         onTap: () {
+                          log(doctor.id);
                           Navigator.push(
                             context,
                             CupertinoPageRoute(

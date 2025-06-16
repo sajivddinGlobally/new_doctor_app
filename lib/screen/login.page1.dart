@@ -72,7 +72,7 @@ class _LoginPage1State extends State<LoginPage1> {
                   controller: _controller,
                   keyboardType: TextInputType.number,
                   maxLength: 10,
-                  autofocus: true,
+                    autofocus: false, // ✅ FIXED LINE
                   onChanged: _checkAndNavigate,
                   decoration: InputDecoration(
                     hintText: "Mobile number",
