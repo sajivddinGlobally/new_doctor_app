@@ -23,7 +23,7 @@ class _DoctorTimePageState extends State<DoctorTimePage> {
           Container(
             width: MediaQuery.of(context).size.width,
             height: 60.h,
-            decoration: BoxDecoration(color: Color(0xFF28318C)),
+            decoration: BoxDecoration(color: Color(0xff163453)),
             child: Row(
               children: [
                 SizedBox(width: 20.w),
@@ -85,7 +85,7 @@ class _DoctorTimePageState extends State<DoctorTimePage> {
                 height: 30.h,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color(0xFF1896F2),
+                  color: Color(0xff163453),
                 ),
                 child: Center(
                   child: Icon(
@@ -252,7 +252,7 @@ class _DoctorTimePageState extends State<DoctorTimePage> {
                   width: 89.w,
                   height: 35.h,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xFF1896F2), width: 1.w),
+                    border: Border.all(color: Color(0xff163453), width: 1.w),
                     borderRadius: BorderRadius.circular(6.r),
                   ),
                   child: Center(
@@ -261,7 +261,7 @@ class _DoctorTimePageState extends State<DoctorTimePage> {
                       style: GoogleFonts.inter(
                         fontSize: 15.sp,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xFF1896F2),
+                        color: Color(0xff163453),
                       ),
                     ),
                   ),
@@ -271,7 +271,7 @@ class _DoctorTimePageState extends State<DoctorTimePage> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size(300.w, 40.h),
-                      backgroundColor: Color(0xFF1896F2),
+                      backgroundColor: Color(0xff163453),
                     ),
                     onPressed: () {
                       Navigator.push(
@@ -312,7 +312,7 @@ class TimeBody extends StatelessWidget {
       width: 89.w,
       height: 35.h,
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xFF1896F2), width: 1.w),
+        border: Border.all(color: Color(0xff163453), width: 1.w),
         borderRadius: BorderRadius.circular(6.r),
       ),
       child: Center(
@@ -321,7 +321,7 @@ class TimeBody extends StatelessWidget {
           style: GoogleFonts.inter(
             fontSize: 15.sp,
             fontWeight: FontWeight.w400,
-            color: Color(0xFF1896F2),
+            color: Color(0xff163453),
           ),
         ),
       ),
@@ -342,7 +342,7 @@ class DateBody extends StatelessWidget {
       height: 55.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4.r),
-        border: Border.all(color: Color(0xFF1896F2), width: 1.w),
+        border: Border.all(color: Color(0xff163453), width: 1.w),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

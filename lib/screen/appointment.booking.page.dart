@@ -37,7 +37,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                   height: 30.h,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF1896F2),
+                    color: Color(0xff163453),
                   ),
                   child: Center(
                     child: Icon(
@@ -132,7 +132,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(13.r),
                           border: Border.all(
-                            color: Color(0xFF1896F2),
+                            color: Color(0xff163453),
                             width: 0.5.w,
                           ),
                         ),
@@ -140,7 +140,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                           children: [
                             Icon(
                               Icons.home_outlined,
-                              color: Color(0xFF1896F2),
+                              color: Color(0xff163453),
                               size: 14.sp,
                             ),
                             Text(
@@ -148,7 +148,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                               style: GoogleFonts.inter(
                                 fontSize: 10.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xFF1896F2),
+                                color: Color(0xff163453),
                               ),
                             ),
                           ],
@@ -369,7 +369,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                           style: GoogleFonts.inter(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF1896F2),
+                            color: Color(0xff163453),
                           ),
                         ),
                       ],
@@ -631,7 +631,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                               style: GoogleFonts.inter(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xFF1896F2),
+                                color: Color(0xff163453),
                                 letterSpacing: -1,
                               ),
                             ),
@@ -650,7 +650,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                               style: GoogleFonts.inter(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xFF1896F2),
+                                color: Color(0xff163453),
                                 letterSpacing: -1,
                               ),
                             ),
@@ -720,7 +720,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                     style: GoogleFonts.inter(
                       fontSize: 17.sp,
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFF1896F2),
+                      color: Color(0xff163453),
                     ),
                   ),
                 ],
@@ -747,7 +747,7 @@ class _AppointmentBookingPageState extends State<AppointmentBookingPage> {
                         style: GoogleFonts.inter(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFF1896F2),
+                          color: Color(0xff163453),
                         ),
                       ),
                     ],

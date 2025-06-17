@@ -1,5 +1,3 @@
-
-
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
@@ -22,7 +20,6 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
   int tabBo = 0;
   @override
   Widget build(BuildContext context) {
- 
     final data = ref.watch(perticulerDocotrProvider(widget.id));
     log(int.parse(widget.id));
     return Scaffold(
@@ -89,7 +86,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                             style: GoogleFonts.inter(
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF28318C),
+                              color: Color(0xff163453),
                               letterSpacing: -1,
                             ),
                           ),
@@ -155,7 +152,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                                 style: GoogleFonts.lexend(
                                   fontSize: 16.sp,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xFF101623),
+                                  color: Color(0xff163453),
                                 ),
                               ),
                             ],
@@ -193,7 +190,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                                 style: GoogleFonts.lexend(
                                   fontSize: 16.sp,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xFF101623),
+                                  color: Color(0xff163453),
                                 ),
                               ),
                             ],
@@ -374,7 +371,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                                 style: GoogleFonts.inter(
                                   fontSize: 15.sp,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF28318C),
+                                  color: Color(0xff163453),
                                   letterSpacing: -1,
                                 ),
                               ),
@@ -404,7 +401,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                                     style: GoogleFonts.inter(
                                       fontSize: 11.sp,
                                       fontWeight: FontWeight.w300,
-                                      color: Color(0xFF28318C),
+                                      color: Color(0xff163453),
                                     ),
                                   ),
                                   SizedBox(width: 60.w),
@@ -443,7 +440,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                                   padding: EdgeInsets.zero,
                                   child: TabBar(
                                     isScrollable: true,
-                                    indicatorColor: Color(0xFF28318C),
+                                    indicatorColor: Color(0xff163453),
                                     labelColor: Color(0xFF000000),
                                     unselectedLabelColor: Color(0xFF9A97AE),
                                     indicatorWeight: 2.w,
@@ -550,7 +547,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                                                       fontSize: 12.sp,
                                                       fontWeight:
                                                           FontWeight.w500,
-                                                      color: Color(0xFF28318C),
+                                                      color: Color(0xff163453),
                                                     ),
                                                   ),
                                                 ),
@@ -727,7 +724,7 @@ class _DoctorDetailsPageState extends ConsumerState<DoctorDetailsPage> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         minimumSize: Size(300.w, 40.h),
-                        backgroundColor: Color(0xFF1896F2),
+                        backgroundColor: Color(0xff163453),
                       ),
                       onPressed: () {
                         Navigator.push(
